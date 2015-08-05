@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title><?php wp_title('|',1,'right'); ?> <?php bloginfo('name'); ?></title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="author" content="Имя автора">
+
+	<meta content="Название сайта" />
+	<meta content="website" />
+	<meta content="Ссылка на изображение логотипа" />
+	
+	<link href="<?php echo get_template_directory_uri(); ?>/style.css" rel="stylesheet">
+
+	<!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+	<!--[if lt IE 9]>
+		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script> 
+	<![endif]-->
+	
+	<?php wp_enqueue_script("jquery"); ?> 
+	<?php wp_head(); ?> 
+</head>
+<body>
+	<div id="wrap"><!-- Фиксированная респонсив навигация -->
+		<header>
+			<nav id="nav" class="navbar navbar-default" role="navigation">
+			  <!-- Brand and toggle get grouped for better mobile display -->
+				<div class="navbar-header visible-xs">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+				  <span class="sr-only">Toggle navigation</span>
+				  <span class="icon-bar"></span>
+				  <span class="icon-bar"></span>
+				  <span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="#">Kawaii Walls</a>
+				</div>
+			 
+				<!-- Collect the nav links, forms, and other content for toggling -->
+				<div class="collapse navbar-collapse navbar-ex1-collapse">
+				<?php wp_nav_menu(array(
+				  'container_class' => 'menu-header',
+				  'theme_location' => 'primary',
+				  'items_wrap' => '<ul id="%1$s" class="%2$s nav navbar-nav">%3$s</ul>',
+				  'walker' => new Bootstrap_Walker_Nav_Menu,
+				)); ?>
+				</div><!-- /.navbar-collapse -->
+			</nav>
+		</header>
+
+		<div class="container">
+			<div class="row">
+				<div class="span7">Тест контент</div>
+
+				<div class="span3">
+					<aside>Тест сайдбар</aside>
+				</div>
+			</div>
+		</div>
+
+		<!-- Прижимаем футер к низу -->
+		<div id="push"></div>
+	</div>
+
+	<footer>
+		<div id="footer">
+			<div class="container">Подвал</div>
+		</div>
+	</footer>
+
+	<!-- Подключаем скрипты -->
+	<script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+	<script type="text/javascript" src="./js/bootstrap.min.js"></script>
+	<?php wp_footer(); ?>
+</body>
+</html>

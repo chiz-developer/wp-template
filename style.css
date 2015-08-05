@@ -1,0 +1,58 @@
+/*!
+	Theme Name: MyTheme
+	Theme URI: http://jul-collection.com
+	Description: Free responsive portfolio/blog theme
+	Author: Bootstrap
+	Author URI: http://twitter.github.com/bootstrap/
+	Version: 1.0
+    License: Attribution-ShareAlike 3.0 Unported (CC BY-SA 3.0) 
+	License URI: http://creativecommons.org/licenses/by-sa/3.0/
+
+*/
+
+body { 
+
+}
+ 
+header {
+padding-bottom: 70px;
+}
+/* Стили для подвала внизу страницы */
+html, body {
+	height: 100%;
+}
+
+#wrap {
+	min-height: 100%;
+	height: auto !important;
+	height: 100%;
+	margin: 0 auto -60px;
+}
+
+/* Высота футера */
+#push, #footer {
+	height: 60px;
+}
+#footer {
+	background-color: #f5f5f5;
+}
+
+@media (max-width: 767px) {
+	#footer {
+		margin-left: -20px;
+		margin-right: -20px;
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+}
+
+/* Ширна контейнера */
+.container {
+	max-width:970px;
+	width: auto;
+}
+
+}
+.container .credit {
+	margin: 20px 0;
+}
